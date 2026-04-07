@@ -1,23 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alaska Computer Science - News and Resources</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e9eff5;
+            color: #1a2a3a;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #003f7f, #00609e);
+            color: #fff;
+            text-align: center;
+            padding: 2.5rem 1rem 2rem;
+        }
+        .header img {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 1rem;
+        }
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 700px;
+            margin: -1.5rem auto 2rem;
+            padding: 0 1rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .card h2 {
+            font-size: 1.25rem;
+            color: #003f7f;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #39b4e8;
+            padding-bottom: 0.4rem;
+        }
+        .newsletter-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+        .newsletter-list li a {
+            display: block;
+            padding: 0.55rem 0.9rem;
+            background: #f0f5fb;
+            border-left: 3px solid #39b4e8;
+            border-radius: 4px;
+            color: #003f7f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .newsletter-list li a:hover {
+            background: #dce8f5;
+            border-left-color: #003f7f;
+        }
+        .links-section {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .links-section a {
+            flex: 1 1 200px;
+            display: block;
+            text-align: center;
+            padding: 0.75rem 1rem;
+            background: #003f7f;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .links-section a:hover {
+            background: #00609e;
+        }
+        /* Email signup form */
+        .card fieldset {
+            border: none;
+            padding: 0;
+        }
+        .card legend {
+            font-size: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .card .form {
+            list-style: none;
+            margin: 0.8rem 0;
+        }
+        .card .email_fields label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #1a2a3a;
+        }
+        .card .email_fields label img { display: none; }
+        .card .email_text_field {
+            width: 100%;
+            padding: 0.6rem 0.8rem;
+            border: 1px solid #b0c4d8;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .card .email_text_field:focus {
+            outline: none;
+            border-color: #39b4e8;
+            box-shadow: 0 0 0 3px rgba(57,180,232,0.25);
+        }
+        .card .button_panel {
+            margin-top: 0.8rem;
+        }
+        .card .sr-button {
+            background: #003f7f;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .card .sr-button:hover {
+            background: #00609e;
+        }
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #5a6a7a;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Alaska Computer Science</h1>
-    <p>Stay updated with the latest news and resources in computer science.</p>
-    <h2>Latest News</h2>
-    <ul>
-        <li><a href="080825.html">August 2025</a></li>
-        <li><a href="091225.html">September 2025</a></li>
-        <li><a href="101625.html">October 2025</a></li>
-        <li><a href="111325.html">November 2025</a></li>
-        <li><a href="120225.html">December 2025</a></li>
-        <li><a href="012026.html">January 2026</a></li>
-        <li><a href="022026.html">February 2026</a></li>
-        <li><a href="032026.html">March 2026</a></li>
-        <li><a href="042026.html">April 2026</a></li>
-    </ul>
+
+<div class="header">
+    <a href="https://education.alaska.gov/computer-science">
+        <img src="assets/012026/akCS_logo.png" alt="Computer Science for Alaska logo" />
+    </a>
+    <h1>Computer Science for Alaska</h1>
+    <p>News &amp; resources for computer science, digital literacy, and artificial intelligence for K-12 schools in Alaska</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>AKDEED Resources and Information</h2>
+        <div class="links-section">
+            <a href="https://education.alaska.gov/computer-science">Computer Science</a>
+            <a href="https://education.alaska.gov/artificial-intelligence">Artificial Intelligence</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Newsletter Archive</h2>
+        <ul class="newsletter-list">
+            <li><a href="042026.html">April 2026</a></li>
+            <li><a href="032026.html">March 2026</a></li>
+            <li><a href="022026.html">February 2026</a></li>
+            <li><a href="012026.html">January 2026</a></li>
+            <li><a href="120225.html">December 2025</a></li>
+            <li><a href="111325.html">November 2025</a></li>
+            <li><a href="101625.html">October 2025</a></li>
+            <li><a href="091225.html">September 2025</a></li>
+            <li><a href="080825.html">August 2025</a></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Subscribe to Email Updates</h2>
+        <form id="GD-snippet-form" action="https://public.govdelivery.com/accounts/AKDEED/subscribers/qualify" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+<input type="hidden" name="topic_id" id="topic_id" value="AKDEED_106" />
+<fieldset>
+<legend>Email Updates</legend>
+<div>Enter your email to sign up for newsletter updates.</div>
+<ol class='form'>
+<li class='email_fields' style='display: block'>
+<label for="email"><img class="required" alt="" aria-hidden="true" src="https://content.govdelivery.com/images/required.gif" />Email Address</label>
+<input type="email" name="email" id="email" value="" class="long email_text_field" aria-describedby="errorExplanation" required="required" />
+</li>
+</ol>
+<div class='button_panel'>
+<input type="submit" name="commit" value="Submit" class="sr-button reverse" data-disable-with="Submit" />
+</div>
+</fieldset>
+</form>
+    </div>
+
+</div>
+
+<div class="footer">
+    Alaska Department of Education &amp; Early Development
+</div>
+
 </body>
 </html>
